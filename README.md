@@ -78,7 +78,7 @@ $$
 ### 学習推移
 
 <p align="center">
-  <img src="./loss_curve.png" width="600">
+  <img src="./README_ima/loss_curve.png" width="600">
 </p>
 
 ### 結果
@@ -86,7 +86,7 @@ $$
 上段の画像はオリジナル画像，下段は出力結果の画像となっている．
 
 <p align="center">
-  <img src="./result_images.png" width="800">
+  <img src="./README_ima/result_images.png" width="800">
 </p>
 
 ### 考察
