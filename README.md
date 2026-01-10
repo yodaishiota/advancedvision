@@ -64,6 +64,23 @@ $$
 \mathcal{L} = \frac{1}{N} \sum_{i=1}^{N} (x_i - y_i)^2
 $$
 
+## 動作環境
+- 実行環境：Google Colab
+- Python：3.12.12
+- PyTorch：2.9.0+cpu
+- torchvision
+- Matplotlib
+- NumPy
+
+## 性能評価
+
+### 学習推移
+
+### 結果
+
+### 考察
+
+
 ## 参考文献
 本プログラムの実装に当たり，以下の文献を参考にしました．
 ### 講義資料
