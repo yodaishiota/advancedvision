@@ -70,7 +70,6 @@ $$
 本プログラムの実装に当たり，以下の文献を参考にしました．
 ### 講義資料
 また上田教授の下記スライド群のlesson2,lesson3を参考にさせていただきました．
-
     - https://github.com/ryuichiueda/slides_marp/tree/master/advanced_vision
 
 ## ライセンス
