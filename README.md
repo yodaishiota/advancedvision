@@ -83,6 +83,9 @@ $$
 
 ## 参考文献
 本プログラムの実装に当たり，以下の文献を参考にしました．
+- [Qiita: PyTorchでAutoEncoderを実装してみる](https://www.google.com/search?q=https://qiita.com/suy/items/0e37b2dc8402525fb0c4)
+- [Zenn: PyTorch LightningでAutoEncoderを実装してMNISTを学習する](https://www.google.com/search?q=https://zenn.dev/peisuke/articles/c16bd53463994d)
+
 ### 講義資料
 また上田教授の下記スライド群のlesson3を参考にさせていただきました．
     https://github.com/ryuichiueda/slides_marp/tree/master/advanced_vision
