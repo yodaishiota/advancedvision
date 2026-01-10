@@ -105,8 +105,9 @@ $$
 
 ## 参考文献
 本プログラムの実装に当たり，以下の文献を参考にしました．
-- [Deep Insider (ITmedia): PyTorchでオートエンコーダーによる画像生成をしてみよう](https://atmarkit.itmedia.co.jp/ait/articles/2007/10/news024.html)
 - [CUBE SUGAR CONTAINER: PyTorch で AutoEncoder を書いてみる](https://blog.amedama.jp/entry/pytorch-mnist-autoencoder)
+本モデルのネットワーク構造の概念図は以下のサイトから引用させていただきました．
+- [Deep Insider (ITmedia): PyTorchでオートエンコーダーによる画像生成をしてみよう](https://atmarkit.itmedia.co.jp/ait/articles/2007/10/news024.html)
 
 ### 講義資料
 また上田教授の下記スライド群のlesson3を参考にさせていただきました．
