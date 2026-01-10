@@ -44,7 +44,7 @@ $$
 
 #### 3. Decoder（復号化器）
 DecoderはEncoderと逆の構造を持ち，潜在変数 $\boldsymbol{z}$ から元の次元数（今回は784）への復元を行う．
-出力層以外の活性化関数にはReLUを使用するが，最終出力層では画素値を $[0, 1]$ の範囲に収めるため，講義第2回で扱った **Sigmoid関数** $\sigma(\cdot)$ を使用する．
+出力層以外の活性化関数にはReLUを使用するが，最終出力層では画素値を $[0, 1]$ の範囲に収めるため，**Sigmoid関数** $\sigma(\cdot)$ を使用する．
 
 $$
 \sigma(u) = \frac{1}{1 + e^{-u}}
@@ -57,7 +57,7 @@ $$
 $$
 
 #### 4. 損失関数（Loss Function）
-学習には，講義第3回でオートエンコーダの損失関数として紹介された **平均二乗誤差（Mean Squared Error: MSE）** を使用する．
+学習には，**平均二乗誤差（Mean Squared Error: MSE）** を使用する．
 入力 $\boldsymbol{x}$ の第 $i$ 成分（画素）を $x_i$，出力 $\boldsymbol{y}$ の第 $i$ 成分を $y_i$ とすると，損失 $\mathcal{L}$ は次式で定義される．
 
 $$
@@ -67,7 +67,7 @@ $$
 ## 参考文献
 本プログラムの実装に当たり，以下の文献を参考にしました．
 ### 講義資料
-また上田教授の下記スライド群のlesson2,lesson3を参考にさせていただきました．
+また上田教授の下記スライド群のlesson3を参考にさせていただきました．
     https://github.com/ryuichiueda/slides_marp/tree/master/advanced_vision
 
 ## ライセンス
