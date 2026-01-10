@@ -56,8 +56,6 @@ $$
 \boldsymbol{y} = \sigma(\boldsymbol{W}_{out} \boldsymbol{h}_{last} + \boldsymbol{b}_{out})
 $$
 
-ここで，$$\boldsymbol{y} \in \mathbb{R}^{784}$$ ．
-
 #### 4. 損失関数（Loss Function）
 学習には，講義第3回でオートエンコーダの損失関数として紹介された **平均二乗誤差（Mean Squared Error: MSE）** を使用する．
 入力 $\boldsymbol{x}$ の第 $i$ 成分（画素）を $x_i$，出力 $\boldsymbol{y}$ の第 $i$ 成分を $y_i$ とすると，損失 $\mathcal{L}$ は次式で定義される．
