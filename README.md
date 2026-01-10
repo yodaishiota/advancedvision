@@ -56,7 +56,7 @@ $$
 \boldsymbol{y} = \sigma(\boldsymbol{W}_{out} \boldsymbol{h}_{last} + \boldsymbol{b}_{out})
 $$
 
-ここで，$\boldsymbol{y} \in \mathbb{R}^{784}$ ．
+ここで，$$\boldsymbol{y} \in \mathbb{R}^{784}$$ ．
 
 #### 4. 損失関数（Loss Function）
 学習には，講義第3回でオートエンコーダの損失関数として紹介された **平均二乗誤差（Mean Squared Error: MSE）** を使用する．
