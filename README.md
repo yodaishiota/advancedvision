@@ -64,7 +64,7 @@ $$
 ## 実行方法
 1. 以下のボタンから，Google Colab上でノートブックを直接開く．
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yodaishiota/advancedvision/blob/main/main.ipynb)
-2. ランタイムのタイプを「Python 3」に変更し，ハードウェアアクセラレータをGPUに変更する．(なお，使用できなければcpuのままでも問題ありません)
+2. ランタイムのタイプを「Python 3」に変更し，ハードウェアアクセラレータをGPUに変更する．(選択できなければcpuのままでも可．)
 3. 上から順にセルを実行する.
 
 ## 動作環境
