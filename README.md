@@ -11,6 +11,65 @@
 Encoder部は入力画像(784次元)を段階的に削減して4次元の潜在変数に変換し，Decoder部はそれを元の784次元に復元する．
 活性化関数には中間層にReLU，出力層にSigmoid関数を使用している．
 
+以下に本モデルのネットワーク構造の概念図と数式を示す.
+
+### ブロック図
+
+
+### 数式
+
+#### 1. 入力データの定義
+MNIST画像は $28 \times 28$ の2次元データだが，本モデルでは全結合層に入力するため，1次元の列ベクトル $\boldsymbol{x}$ に平坦化（Flatten）して扱う．
+
+$$
+\boldsymbol{x} \in \mathbb{R}^{784} \quad (784 = 28 \times 28)
+$$
+
+#### 2. Encoder（符号化器）
+Encoderは4層の全結合層から構成され，次元数を $784 \to 128 \to 64 \to 12 \to 4$ と段階的に圧縮する．
+第 $l$ 層の重み行列を $\boldsymbol{W}^{(l)}_E$，バイアスベクトルを $\boldsymbol{b}^{(l)}_E$ と定義する．
+
+例えば，第1層（$784 \to 128$）の計算は，ReLU関数 $\phi(\cdot) = \max(0, \cdot)$ を用いて次のように表される．
+
+$$
+\boldsymbol{h}^{(1)} = \phi(\boldsymbol{W}^{(1)}_E \boldsymbol{x} + \boldsymbol{b}^{(1)}_E)
+$$
+
+各パラメータの次元数は以下の通り．
+* $\boldsymbol{W}^{(1)}_E \in \mathbb{R}^{128 \times 784}$
+* $\boldsymbol{b}^{(1)}_E \in \mathbb{R}^{128}$
+* $\boldsymbol{h}^{(1)} \in \mathbb{R}^{128}$
+
+同様の計算を繰り返し，最終的に **4次元** の潜在変数ベクトル $\boldsymbol{z} \in \mathbb{R}^{4}$ を得る．
+
+#### 3. Decoder（復号化器）
+DecoderはEncoderと逆の構造を持ち，潜在変数 $\boldsymbol{z}$ から元の次元数（今回は784）への復元を行う．
+出力層以外の活性化関数にはReLUを使用するが，最終出力層では画素値を $[0, 1]$ の範囲に収めるため，講義第2回で扱った **Sigmoid関数** $\sigma(\cdot)$ を使用する．
+
+$$
+\sigma(u) = \frac{1}{1 + e^{-u}}
+$$
+
+復元画像ベクトル $\boldsymbol{y}$ の計算は以下の通り．
+
+$$
+\boldsymbol{y} = \sigma(\boldsymbol{W}_{out} \boldsymbol{h}_{last} + \boldsymbol{b}_{out})
+$$
+
+ここで，$\boldsymbol{y} \in \mathbb{R}^{784}$ ．
+
+#### 4. 損失関数（Loss Function）
+学習には，講義第3回でオートエンコーダの損失関数として紹介された **平均二乗誤差（Mean Squared Error: MSE）** を使用する．
+入力 $\boldsymbol{x}$ の第 $i$ 成分（画素）を $x_i$，出力 $\boldsymbol{y}$ の第 $i$ 成分を $y_i$ とすると，損失 $\mathcal{L}$ は次式で定義される．
+
+$$
+\mathcal{L} = \frac{1}{N} \sum_{i=1}^{N} (x_i - y_i)^2
+$$
+
+## 参考文献
+本プログラムの実装に当たり，以下の文献を参考にしました．
+### 講義資料
+
 ## ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 - © 2025 Yodai Shiota
