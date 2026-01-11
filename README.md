@@ -17,7 +17,8 @@ Encoder部は入力画像(784次元)を段階的に削減して4次元の潜在�
 <p align="center">
   <img src="./README_ima/structure.gif" width="600">
 </p>
-- 出典: [＠IT - PyTorchでオートエンコーダーによる画像生成をしてみよう](https://atmarkit.itmedia.co.jp/ait/articles/2007/10/news024.html, by Shinji Kawasaki)
+
+- [＠IT - PyTorchでオートエンコーダーによる画像生成をしてみよう](https://atmarkit.itmedia.co.jp/ait/articles/2007/10/news024.html, by Shinji Kawasaki)
 
 なお，上図は784次元のデータ2次元に圧縮しているが，本プログラムでは4次元に圧縮している．
 
