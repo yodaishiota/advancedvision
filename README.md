@@ -113,7 +113,7 @@ $$
 - [Deep Insider (ITmedia): PyTorchでオートエンコーダーによる画像生成をしてみよう](https://atmarkit.itmedia.co.jp/ait/articles/2007/10/news024.html)
 
 ### 講義資料
-また上田教授の下記スライド群のlesson3を参考にさせていただきました．
+また上田先生の下記スライド群のlesson3を参考にさせていただきました．
     https://github.com/ryuichiueda/slides_marp/tree/master/advanced_vision
 
 ## ライセンス
